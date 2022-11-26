@@ -49,7 +49,7 @@ internal class Program
         // Выбрать 3-x первых сотрудников, возраст которых превышает 25 лет.
         var query3 = from employee in employees
             where employee.Age > 25
-            select employee;
+                     select employee.FirstName + " " + employee.LastName;
         // Вывод в консоль.
         Console.WriteLine("3) Выбрать 3-x первых сотрудников, возраст которых превышает 25 лет.");
         foreach (var item in query3.Take(3)) Console.WriteLine(item);
